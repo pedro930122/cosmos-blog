@@ -9,7 +9,7 @@ export interface Comment {
   creator: string;
   title: string;
   body: string;
-  posID: number;
+  postID: number;
   createdAt: number;
 }
 
@@ -18,7 +18,7 @@ const baseComment: object = {
   creator: "",
   title: "",
   body: "",
-  posID: 0,
+  postID: 0,
   createdAt: 0,
 };
 
@@ -36,8 +36,8 @@ export const Comment = {
     if (message.body !== "") {
       writer.uint32(34).string(message.body);
     }
-    if (message.posID !== 0) {
-      writer.uint32(40).uint64(message.posID);
+    if (message.postID !== 0) {
+      writer.uint32(40).uint64(message.postID);
     }
     if (message.createdAt !== 0) {
       writer.uint32(48).int64(message.createdAt);
@@ -65,7 +65,7 @@ export const Comment = {
           message.body = reader.string();
           break;
         case 5:
-          message.posID = longToNumber(reader.uint64() as Long);
+          message.postID = longToNumber(reader.uint64() as Long);
           break;
         case 6:
           message.createdAt = longToNumber(reader.int64() as Long);
@@ -100,10 +100,10 @@ export const Comment = {
     } else {
       message.body = "";
     }
-    if (object.posID !== undefined && object.posID !== null) {
-      message.posID = Number(object.posID);
+    if (object.postID !== undefined && object.postID !== null) {
+      message.postID = Number(object.postID);
     } else {
-      message.posID = 0;
+      message.postID = 0;
     }
     if (object.createdAt !== undefined && object.createdAt !== null) {
       message.createdAt = Number(object.createdAt);
@@ -119,7 +119,7 @@ export const Comment = {
     message.creator !== undefined && (obj.creator = message.creator);
     message.title !== undefined && (obj.title = message.title);
     message.body !== undefined && (obj.body = message.body);
-    message.posID !== undefined && (obj.posID = message.posID);
+    message.postID !== undefined && (obj.postID = message.postID);
     message.createdAt !== undefined && (obj.createdAt = message.createdAt);
     return obj;
   },
@@ -146,10 +146,10 @@ export const Comment = {
     } else {
       message.body = "";
     }
-    if (object.posID !== undefined && object.posID !== null) {
-      message.posID = object.posID;
+    if (object.postID !== undefined && object.postID !== null) {
+      message.postID = object.postID;
     } else {
-      message.posID = 0;
+      message.postID = 0;
     }
     if (object.createdAt !== undefined && object.createdAt !== null) {
       message.createdAt = object.createdAt;

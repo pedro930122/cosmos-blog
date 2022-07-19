@@ -17,7 +17,7 @@ export interface BlogComment {
   body?: string;
 
   /** @format uint64 */
-  posID?: string;
+  postID?: string;
 
   /** @format int64 */
   createdAt?: string;
@@ -45,6 +45,9 @@ export interface BlogPost {
   id?: string;
   title?: string;
   body?: string;
+
+  /** @format int64 */
+  createdAt?: string;
 }
 
 export interface BlogQueryAllCommentResponse {

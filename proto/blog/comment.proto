@@ -8,6 +8,6 @@ message Comment {
   string creator = 2; 
   string title = 3; 
   string body = 4; 
-  uint64 posID = 5; 
+  uint64 postID = 5; 
   int64 createdAt = 6; 
 }

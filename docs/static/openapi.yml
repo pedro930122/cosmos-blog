@@ -28,7 +28,7 @@ paths:
                       type: string
                     body:
                       type: string
-                    posID:
+                    postID:
                       type: string
                       format: uint64
                     createdAt:
@@ -160,7 +160,7 @@ paths:
                     type: string
                   body:
                     type: string
-                  posID:
+                  postID:
                     type: string
                     format: uint64
                   createdAt:
@@ -252,6 +252,9 @@ paths:
                       type: string
                     body:
                       type: string
+                    createdAt:
+                      type: string
+                      format: int64
               pagination:
                 type: object
                 properties:
@@ -30790,7 +30793,7 @@ definitions:
         type: string
       body:
         type: string
-      posID:
+      postID:
         type: string
         format: uint64
       createdAt:
@@ -30823,6 +30826,9 @@ definitions:
         type: string
       body:
         type: string
+      createdAt:
+        type: string
+        format: int64
   blog.blog.QueryAllCommentResponse:
     type: object
     properties:
@@ -30840,7 +30846,7 @@ definitions:
               type: string
             body:
               type: string
-            posID:
+            postID:
               type: string
               format: uint64
             createdAt:
@@ -30886,7 +30892,7 @@ definitions:
             type: string
           body:
             type: string
-          posID:
+          postID:
             type: string
             format: uint64
           createdAt:
@@ -30916,6 +30922,9 @@ definitions:
               type: string
             body:
               type: string
+            createdAt:
+              type: string
+              format: int64
       pagination:
         type: object
         properties:
