@@ -13,7 +13,6 @@ func (k msgServer) CreateComment(goCtx context.Context, msg *types.MsgCreateComm
 	ctx := sdk.UnwrapSDKContext(goCtx)
 
 	// TODO: Handling the message
-	_ = ctx
 	post, found := k.GetPost(ctx, msg.PostID)
 
 	if !found {
